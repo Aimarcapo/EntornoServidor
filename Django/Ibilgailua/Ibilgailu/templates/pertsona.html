@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block content %}
+<a href="{% url 'pertsona-new' %}"><span class="glyphicon glyphicon-plus">Pertsona berria gehitu</span></a>
+<ul>
+  {% for pertsona in pertsonak %}
+  <li>{{ pertsona }}</li>
+  {% endfor %}
+  <p>Hola</p>
+</ul>
+{% endblock %}
+

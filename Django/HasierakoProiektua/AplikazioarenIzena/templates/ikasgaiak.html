@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Eibar Ikasleak - Main Page - Zerrenda</title>
+  </head>
+</html>
+<link href="https://fonts.googleapis.com/css?family=Ruslan+Display" rel="stylesheet">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstraptheme.min.css"> 
+</head> 
+<body>    
+    <div class="page-header">        
+        <h1>
+            <a href="/">Notak - Zerrenda</a>
+        </h1>    
+        <a href="{% url 'ikasgaiak-new' %}"><span class="glyphicon glyphicon-plus">Ikasgai berria gehitu</span></a>
+    </div>    
+    <div class="content container"> 
+        <div class="row">    
+            <div class="col-md-8">                
+                <ul>
+                    {% for ikasgaia in ikasgaiak %}
+                    <li>{{ ikasgaia }}</li>
+                    {% endfor %}
+                    <p>Holaaaa</p>
+                  </ul>          
+            </div>        
+        </div>    
+    </div> 
+</body> 
+</html>

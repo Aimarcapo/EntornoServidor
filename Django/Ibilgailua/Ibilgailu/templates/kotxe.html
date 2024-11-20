@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block content %}
+
+<ul>
+  {% for kotxe in kotxeak %}
+  <li>{{ kotxe }}</li>
+  <a href="{% url 'kotxe-new' %}"><span class="glyphicon glyphicon-plus">Kotxe berria gehitu</span></a>
+  <a href="{% url 'kotxe-delete' %}"><span class="glyphicon glyphicon-plus">Kotxea kendu</span></a>
+  <a href="{% url 'kotxe-edit' kotxe.matrikula %}"><span class="glyphicon glyphicon-plus">Kotxea editatu</span></a>
+  {% endfor %}
+  <p>Hola</p>
+</ul>
+{% endblock %}
+

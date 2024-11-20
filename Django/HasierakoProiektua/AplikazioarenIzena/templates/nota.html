@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block content %}
+<a href="{% url 'nota-new' %}"><span class="glyphicon glyphicon-plus">Nota berria gehitu</span></a>
+<ul>
+  {% for nota in notak %}
+  <li>{{ nota }}</li>
+  <a href="{% url 'nota-delete' nota.id %}">Eliminar</a>
+  <a href="{% url 'nota-edit' nota.id %}">Editar</a>
+  <a href="{% url 'editar_nota' nota.ikasgai_kodea.id nota.ikasle_kodea.id %}">Editaar</a>
+  {% endfor %}
+  <p>Hola</p>
+  
+</ul>
+{% endblock %}
+
