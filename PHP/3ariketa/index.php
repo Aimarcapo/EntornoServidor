@@ -6,17 +6,17 @@
     <title>Formularioa</title>
     <script>
         function validateForm() {
-            // Lortu eremuak
+           
             const aldea = document.getElementById("aldea").value.trim();
             const irudia = document.getElementById("irudia").value;
 
-            // Balidatu derrigorrezko eremua
+           
             if (!aldea || isNaN(aldea) || aldea <= 0) {
                 alert("Mesedez, idatzi aldea (zenbaki bat eta positiboa izan behar du).");
                 return false;
             }
 
-            // Irudia badago, balidatu formatua
+            
             if (irudia) {
                 const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
                 if (!allowedExtensions.test(irudia)) {

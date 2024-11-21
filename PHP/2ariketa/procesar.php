@@ -34,16 +34,3 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     echo "<p>Este archivo solo procesa datos enviados desde un formulario.</p>";
     
 }
-ob_start();
-
-// Llamar a phpinfo() para obtener toda la información, pero solo mostrar la sección de la licencia
-phpinfo(INFO_GENERAL);
-
-// Obtener el contenido del buffer
-$output = ob_get_clean();
-
-// Buscar y mostrar solo la sección de la "PHP License"
-if (strpos($output, 'PHP License') !== false) {
-    // Imprimir solo la parte relevante de la licencia
-    echo substr($output, strpos($output, 'PHP License'));
-}
