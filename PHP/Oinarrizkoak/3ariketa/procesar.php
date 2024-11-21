@@ -43,3 +43,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 } else {
     echo "<h1>Errorea: Sarbidea ez da zuzena.</h1>";
 }
+echo "<a href='../index.html'>Itzuli</a>";

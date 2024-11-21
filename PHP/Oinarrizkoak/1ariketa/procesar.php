@@ -33,3 +33,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     echo "<h1>Acceso no permitido</h1>";
     echo "<p>Este archivo solo procesa datos enviados desde un formulario.</p>";
 }
+echo "<a href='../index.html'>Itzuli</a>";

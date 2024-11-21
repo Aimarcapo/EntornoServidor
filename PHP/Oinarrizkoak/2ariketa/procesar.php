@@ -26,11 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     } else {
 
-        echo "<h1>Error en el formulario</h1>";
-        echo "<p>Por favor, ingresa un número válido para el valor.</p>";
+        echo "<h1>Errorea</h1>";
+        echo "<p>Zenbaki bat sartu 0 baino handiagoa dena</p>";
     }
-} else {
-    echo "<h1>Acceso no permitido</h1>";
-    echo "<p>Este archivo solo procesa datos enviados desde un formulario.</p>";
-    
-}
+} 
+echo "<a href='../index.html'>Itzuli</a>";

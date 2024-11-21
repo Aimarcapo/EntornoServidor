@@ -21,10 +21,7 @@
         <br><br>
         <button type="submit">Kalkulatu</button>
     </form>
+    <a href="../index.html">Itzuli</a>
 </body>
 
 </html>
-
-<?php
-phpinfo();
-?>
