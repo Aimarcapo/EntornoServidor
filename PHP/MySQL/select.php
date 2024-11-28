@@ -39,10 +39,12 @@ while ($registro = $resultado->fetch_assoc()) {
     $i = 0;
     foreach ($registro as $nombreCampo => $valorCampo) {
         $i++;
-        if ($nombreCampo == 'irudia' && !empty($valorCampo)) {
-            echo "<td><a href='uploads/" . htmlspecialchars($valorCampo) . "' target='_blank'>Ikusi irudia</a></td>";
-        } elseif ($i == 8 && empty($valorCampo)) {
-            echo "<td>Sin imagen</td>";
+        if ($nombreCampo == 'irudia') {
+            if (!empty($valorCampo)) {
+                echo "<td><a href='uploads/" . htmlspecialchars($valorCampo) . "' target='_blank'>Ikusi irudia</a></td>";
+            } else {
+                echo "<td>Ez dago irudirik</td>";
+            }
         } else {
             echo "<td>" . htmlspecialchars($valorCampo) . "</td>";
         }
