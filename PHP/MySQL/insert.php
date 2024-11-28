@@ -10,9 +10,9 @@ $conexion = new mysqli($servidor, $usuario, $contraseña, $baseDeDatos);
 if ($conexion->connect_error) {
     die("Error de conexión: " . $conexion->connect_error);
 }
-
+$mostrarFormulario = true;
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
+    $mostrarFormulario = false;
     $mota = $_POST['mota'] ?? null;
     $zonaldea = $_POST['zonaldea'] ?? null;
     $helbidea = $_POST['helbidea'] ?? null;
@@ -80,7 +80,7 @@ $conexion->close();
 ?>
 
 
-
+<?php if ($mostrarFormulario): ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -91,6 +91,7 @@ $conexion->close();
 </head>
 
 <body>
+
     <h1>Formulario para insertar datos en la tabla "clientes"</h1>
     <form method="POST" action="" enctype="multipart/form-data">
         <label for="mota">Tipo de propiedad:</label>
@@ -144,3 +145,4 @@ $conexion->close();
 </body>
 
 </html>
+<?php endif; ?>
